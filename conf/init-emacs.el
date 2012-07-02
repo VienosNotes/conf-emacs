@@ -20,6 +20,13 @@
 (dired-mode-p default-directory
 mode-line-buffer-identification))))
 
+(defun my-set-cursor ()
+	  (set-cursor-color "rgb:99/33/33")
+)
+(add-hook 'find-file-hook
+	'my-set-cursor	
+)
+
 ;; (defun reopen-file ()
 ;;   (interactive)
 ;;   (let ((file-name (buffer-file-name))
